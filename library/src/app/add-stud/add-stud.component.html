@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>add student</title>
+</head>
+<body>
+
+  <form #MyForm="ngForm"  (submit)="SubmitForm(MyForm.value)">
+    name:
+    <input type="text" name="username" minlength="4" #name="ngModel" ngModel  required> <br>
+    <div *ngIf="name.invalid && name.touched">
+      Please provide valid name
+    </div>
+
+    usn :
+    <input type="text" name="usn" required #usn="ngModel" ngModel minlength="12" maxlength="13"> <br>
+<div *ngIf="usn.invalid && usn.touched">
+  Usn should be 12 character
+</div>
+    email:
+    <input type="email" email=true name="email" #email="ngModel" ngModel  required> <br>
+    <div *ngIf="email.invalid &&email.touched">
+      email is invalid
+    </div>
+
+    department:
+    <input type="text" name="dep" required minlength="4" #dep="ngModel" ngModel> <br>
+    <div *ngIf="dep.invalid && dep.touched">
+      department name is required
+    </div>
+    gender :
+    male :<input type="radio" name="gender" value="male">
+    female :<input type="radio" name="gender" value="female">
+
+    <button type="submit">submit</button>
+
+  </form>
+
+</body>
+</html>

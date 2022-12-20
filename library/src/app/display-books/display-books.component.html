@@ -1,0 +1,17 @@
+<div *ngFor="let book of all_books">
+  <div>{{book.name}}</div>
+  <div>{{book.description}}</div>
+  <div *ngIf="book.available; else thenbloc">
+    <button (click)="Issue(book)">Issue a book</button>
+  </div>
+  <ng-template #thenbloc>
+    <button (click)="CancelIssue(book)">Cancel a Issue</button>
+  </ng-template>
+
+  <div *ngIf="book.student!='null'">
+    {{book.student}}
+  </div>
+  <br>
+  <br>
+
+</div>
