@@ -13,6 +13,7 @@ export class AddStudComponent implements OnInit {
 
   ngOnInit(): void {
   }
+   val="";
 
   SubmitForm(data:any)
   {
@@ -21,7 +22,7 @@ export class AddStudComponent implements OnInit {
       usn:data.usn,
       email:data.email,
       dep:data.dep,
-      gender:data.gender,
+      gender:this.val,
       book:"null"
   };
 

@@ -12,13 +12,13 @@
     name:
     <input type="text" name="name" minlength="4" #name="ngModel" ngModel  required> <br>
     <div *ngIf="name.invalid && name.touched">
-      Please provide valid name
+      Please provide valid Book name
     </div>
 
     description:
-    <input type="text" name="description" required #description="ngModel" ngModel minlength="12" maxlength="13"> <br>
+    <input type="text" name="description" required #description="ngModel" ngModel minlength="20"  > <br>
 <div *ngIf="description.invalid && description.touched">
-  Usn should be 12 character
+  book description should be more than 20 characters
 </div>
 
 

@@ -1,10 +1,13 @@
 <div *ngFor="let stud of All_stud">
-  name:<div>{{stud.name}}</div><br>
+  name:<div>{{stud.name}}</div>
   usn:<div>{{stud.usn}}</div>
   email: <div>{{stud.email}}</div>
   dep:<div>{{stud.dep}}</div>
   gender:<div>{{stud.gender}}</div>
   <div *ngIf="stud.book!='null'">
   Books Issued : <div>{{stud.book}}</div>
+
+  <br>
+  <br>
     </div>
 </div>

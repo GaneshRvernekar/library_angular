@@ -13,8 +13,6 @@ export class DisplayStudComponent implements OnInit {
 
   All_stud:stud[]=[];
 
-
-
   ngOnInit(): void {
     this.All_stud=this.ser.getStudents();
   }

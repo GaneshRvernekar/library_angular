@@ -32,8 +32,8 @@
       department name is required
     </div>
     gender :
-    male :<input type="radio" name="gender" value="male">
-    female :<input type="radio" name="gender" value="female">
+    male :<input [(ngModel)]="val" type="radio" name="gender" value="male">
+    female :<input [(ngModel)]="val" type="radio" name="gender" value="female">
 
     <button type="submit">submit</button>
 
